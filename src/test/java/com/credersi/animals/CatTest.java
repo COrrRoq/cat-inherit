@@ -12,4 +12,13 @@ public class CatTest {
 		assertTrue(cat.isAlive());
 		assertEquals(cat.howHungry(), 50);
 	}
+	@Test
+	public void catMinusNineLives() {
+		Cat cat = new Cat();
+		for(int i = 0; i < 9; i++) {
+		cat.runs();
+		cat.runs();
+		}
+		assertTrue(!cat.isAlive());
+	}
 }
